@@ -1,0 +1,28 @@
+{{!-- {{#each}} --}}
+<ul class='list-info'>
+  <li class='list-item'>
+    <div class='flag'>
+      <img class='flag-img' src='{{flag}}' alt='{{name}}' />
+    </div>
+    <p class='country'>{{name}}</p>
+  </li>
+  <li class='list-item'>
+    <p>capital: <span class='description-text'>{{capital}}</span></p>
+  </li>
+  <li class='list-item'>
+    <p>population:
+      <span class='description-text'>
+        {{population}}
+      </span></p>
+  </li>
+  <li class='list-item'>
+    <p>languages:
+      {{#each languages}}
+        <ul>
+          <li class='list-languages'><p><span class='description-text'>{{name}}</span></p></li>
+        </ul>
+      {{/each}}
+    </p>
+  </li>
+</ul>
+{{!-- {{/each}} --}}
