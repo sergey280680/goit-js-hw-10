@@ -4,13 +4,12 @@ import * as _ from 'lodash';
 import Notiflix from 'notiflix';
 
 const DEBOUNCE_DELAY = 300;
-let globalSattingsNotify = {
+const BASE_URL = 'https://restcountries.eu/rest/v2/name';
+const globalSattingsNotify = {
   position: 'center-top',
   showOnlyTheLastOne: true,
   clickToClose: true,
 };
-
-// console.log(globalSattingsNotify.position: "left-top");
 
 const refs = {
   searchForm: document.querySelector('#search-box'),
@@ -34,7 +33,7 @@ function onSearch(e) {
 }
 
 function fetchCountries(name) {
-  return fetch(`https://restcountries.eu/rest/v2/name/${name}`).then(response => {
+  return fetch(`${BASE_URL}/${name}`).then(response => {
     return response.json();
   });
 }
