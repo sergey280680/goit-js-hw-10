@@ -1,6 +1,8 @@
-<li class='card'>
-  <div>
-    <img src='{{flag}}' alt='{{name}}' />
-  </div>
-  <p class='country'>{{name}}</p>
-</li>
+{{#each pageContent}}
+  <li class='card'>
+    <div class='flag-list'>
+      <img class='flag-img-list' src='{{flag}}' alt='{{name}}' />
+    </div>
+    <p class='country'>{{name}}</p>
+  </li>
+{{/each}}
